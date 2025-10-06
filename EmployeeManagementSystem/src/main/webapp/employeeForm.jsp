@@ -17,10 +17,11 @@
 	 <% if (editing) { %>
         <input type="hidden" name="id" value="<%= emp.getId() %>">
     <% } %>
-	Name       : <input type = "text" name = "employeeName"><br>
-	Email      : <input type = "text" name = "employeeEmail"><br>
-	Department : <input type = "text" name = "employeeDept"><br>
+	Name       : <input type = "text" name = "employeeName" value = <%= editing ? emp.getName() : "" %>><br>
+	Email      : <input type = "text" name = "employeeEmail" value = <%= editing ? emp.getEmail() : "" %>><br>
+	Department : <input type = "text" name = "employeeDept" value = <%= editing ? emp.getDepartment() : "" %>><br>
 	 <input type="submit" value="<%= editing ? "Update Employee" : "Add Employee" %>">
 	</form>
 </body>
+
 </html>
